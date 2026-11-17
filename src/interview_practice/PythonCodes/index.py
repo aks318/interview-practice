@@ -165,3 +165,41 @@
 #     return "YES"
 
 # print(validaPalindrom("A man, a plan, a canal: Panama"))
+
+
+# def max2(arr):
+#     m1 =0
+#     m2 =0
+
+#     for i in arr:
+#         if i > m1:
+#             m2 = m1
+#             m1 = max(i, m1)
+#         elif i > m2:
+#             m2 = i
+    
+
+#     print(m1, m2)
+
+# max2([20,21,32,23,36])
+
+def mostWaterContent(arr):
+    left = 0
+    right = len(arr) -1
+    
+    area = 0
+
+    while(left < right):
+        temparea = (right - left) * min(arr[left], arr[right])
+
+        area = max(temparea, area)
+
+        if arr[left] > arr[right]:
+            right -= 1
+        else:
+            left += 1
+
+    print(area)
+
+mostWaterContent([1, 8, 6, 2, 5, 4, 8, 3, 7])
+    
