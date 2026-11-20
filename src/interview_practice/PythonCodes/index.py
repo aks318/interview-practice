@@ -183,23 +183,51 @@
 
 # max2([20,21,32,23,36])
 
-def mostWaterContent(arr):
-    left = 0
-    right = len(arr) -1
+# def mostWaterContent(arr):
+#     left = 0
+#     right = len(arr) -1
     
-    area = 0
+#     area = 0
 
-    while(left < right):
-        temparea = (right - left) * min(arr[left], arr[right])
+#     while(left < right):
+#         temparea = (right - left) * min(arr[left], arr[right])
 
-        area = max(temparea, area)
+#         area = max(temparea, area)
 
-        if arr[left] > arr[right]:
-            right -= 1
-        else:
-            left += 1
+#         if arr[left] > arr[right]:
+#             right -= 1
+#         else:
+#             left += 1
 
-    print(area)
+#     print(area)
 
-mostWaterContent([1, 8, 6, 2, 5, 4, 8, 3, 7])
+# mostWaterContent([1, 8, 6, 2, 5, 4, 8, 3, 7])
     
+
+# def longestSubstring(str1):
+#     left = 0
+#     hash = {}
+#     w = 0
+
+#     for right in range(len(str1)):
+
+#         char = str1[right]
+#         try:
+#             if hash[char] >= left:
+#                 left = hash[char] + 1
+#         except KeyError:
+#             ""
+
+#         hash[char] = right
+
+#         w = max(w, right - left + 1)
+
+#     return w
+
+# print(longestSubstring("abcaabcd"))
+
+
+def func():
+    func()
+
+func()
